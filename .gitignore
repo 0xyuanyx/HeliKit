@@ -4,3 +4,8 @@
 # 개인 기획·디자인 메모 (로컬 전용)
 *-plan.md
 .calm-design/
+
+node_modules/
+www/
+*.jks
+*.keystore

@@ -28,6 +28,21 @@ python3 -m http.server 8000
 node --test *.test.mjs
 ```
 
+## APK 빌드
+
+`main`에 푸시하면 GitHub Actions가 서명된 APK를 만듭니다. 저장소의 **Actions → Android APK → 최근 실행 → Artifacts**에서 받을 수 있습니다. 웹 파일을 고친 뒤 푸시만 하면 새 APK가 나오고, 버전 번호는 자동으로 올라갑니다.
+
+처음 한 번 서명 키를 만들어 저장소 Secrets에 등록해야 합니다.
+
+```sh
+keytool -genkeypair -v -keystore helikit.jks -alias helikit -keyalg RSA -keysize 2048 -validity 10000
+gh secret set ANDROID_KEYSTORE_BASE64 < <(base64 -i helikit.jks)
+gh secret set ANDROID_KEYSTORE_PASSWORD
+gh secret set ANDROID_KEY_ALIAS --body helikit
+```
+
+`helikit.jks`와 비밀번호는 저장소 밖에 따로 보관합니다. 같은 키로 서명해야 기존 앱 위에 업데이트 설치가 됩니다.
+
 ## 라이선스
 
 [MIT](LICENSE) © 2026 유안

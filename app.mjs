@@ -9,12 +9,15 @@ let savedTheme = null;
 try { savedTheme = localStorage.getItem('helikit:theme'); } catch { /* Storage can be unavailable. */ }
 let activeTheme = resolveTheme(savedTheme, themeMedia.matches);
 let themeOverridden = savedTheme === 'light' || savedTheme === 'dark';
+// In the Android app, match status bar icon colors to the in-app theme.
+const systemBars = window.Capacitor?.isNativePlatform?.() ? window.Capacitor.registerPlugin('SystemBars') : null;
 
 function applyTheme(theme) {
   activeTheme = theme;
   document.documentElement.dataset.theme = theme;
   $('theme-toggle').checked = theme === 'dark';
   $('theme-color').content = theme === 'dark' ? '#1C1F24' : '#E4E1DA';
+  systemBars?.setStyle({ style: theme === 'dark' ? 'DARK' : 'LIGHT' }).catch(() => {});
 }
 
 function overlayBaseState() {

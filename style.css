@@ -269,3 +269,10 @@ input[type="text"][inputmode="decimal"], input[type="text"][inputmode="numeric"]
 .unit-pair .unit-trigger { height: 100%; }
 .unit-pair .swap-button { height: auto; min-height: 54px; }
 .license-text p + h2 { margin-top: 28px; }
+
+/* Android 앱: 상태바·내비게이션 바 영역 피하기 (브라우저에서는 0) */
+:root { --safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px)); --safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)); }
+.top-bar { padding-top: var(--safe-top); background: var(--surface); }
+.app-info-view { padding-top: var(--safe-top); padding-bottom: var(--safe-bottom); }
+main { padding-bottom: calc(30px + var(--safe-bottom)); }
+:root { scroll-padding-top: calc(128px + var(--safe-top)); }
