@@ -36,7 +36,7 @@ node --test *.test.mjs
 
 ```sh
 cd ~ && keytool -genkeypair -v -keystore helikit.jks -alias helikit -keyalg RSA -keysize 2048 -validity 10000
-base64 -i helikit.jks | gh secret set ANDROID_KEYSTORE_BASE -R 0xyuanyx/HeliKit64
+base64 -i helikit.jks | gh secret set ANDROID_KEYSTORE_BASE64 -R 0xyuanyx/HeliKit
 gh secret set ANDROID_KEYSTORE_PASSWORD -R 0xyuanyx/HeliKit
 gh secret set ANDROID_KEY_ALIAS -R 0xyuanyx/HeliKit --body helikit
 ```
