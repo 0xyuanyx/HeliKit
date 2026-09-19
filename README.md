@@ -35,8 +35,8 @@ node --test *.test.mjs
 처음 한 번 서명 키를 만들어 저장소 Secrets에 등록해야 합니다.
 
 ```sh
-keytool -genkeypair -v -keystore helikit.jks -alias helikit -keyalg RSA -keysize 2048 -validity 10000
-gh secret set ANDROID_KEYSTORE_BASE64 < <(base64 -i helikit.jks)
+cd ~ && keytool -genkeypair -v -keystore helikit.jks -alias helikit -keyalg RSA -keysize 2048 -validity 10000
+base64 -i helikit.jks | gh secret set ANDROID_KEYSTORE_BASE64
 gh secret set ANDROID_KEYSTORE_PASSWORD
 gh secret set ANDROID_KEY_ALIAS --body helikit
 ```
