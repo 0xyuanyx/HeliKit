@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta id="theme-color" name="theme-color" content="#E4E1DA">
+  <meta name="description" content="회전익 조종사를 위한 단위 및 탑재 여유중량 계산기">
+  <title>HeliKit</title>
+  <link rel="icon" href="app-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="top-bar">
+    <header class="app-header">
+      <div class="brand"><span class="brand-icon" aria-hidden="true"></span><span>HeliKit</span></div>
+      <button id="menu-button" class="menu-button" type="button" aria-label="메뉴" aria-haspopup="dialog" aria-controls="settings-panel" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div id="settings-panel" class="settings-panel" role="dialog" aria-label="설정" hidden>
+        <strong class="settings-title">설정</strong>
+        <label class="theme-row" for="theme-toggle">
+          <span>화면 모드</span>
+          <span class="theme-choices"><span>라이트</span><input id="theme-toggle" class="theme-switch" type="checkbox" role="switch" aria-label="다크 모드"><span>다크</span></span>
+        </label>
+        <button id="open-app-info" class="settings-link" type="button">앱 정보 <span aria-hidden="true">›</span></button>
+      </div>
+    </header>
+    <nav class="main-tabs" role="tablist" aria-label="계산 기능">
+      <button id="tab-units" class="main-tab active" type="button" role="tab" aria-selected="true" aria-controls="panel-units">단위 계산</button>
+      <button id="tab-weight" class="main-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-weight">여유중량 계산</button>
+    </nav>
+    </div>
+    <main id="app-main">
+      <section id="panel-units" role="tabpanel" aria-labelledby="tab-units">
+        <div id="category-view"><div id="category-list" class="category-grid"></div></div>
+        <div id="converter-view" hidden>
+          <div class="converter-head"><button id="back-categories" class="back-button" type="button">← 전체 단위</button><div class="detail-title"><span id="converter-title-icon" class="detail-icon category-detail-icon" aria-hidden="true"></span><h1 id="converter-title">길이</h1></div></div>
+          <div class="converter-core">
+            <div class="unit-pair">
+              <div class="unit-picker"><span class="control-label">입력 단위</span><button id="from-trigger" class="unit-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="from-menu"></button><div id="from-menu" class="unit-menu" role="listbox" aria-label="입력 단위 선택" hidden></div></div>
+              <button id="swap-units" class="swap-button" type="button" aria-label="입력 단위와 결과 단위 교환">⇄</button>
+              <div class="unit-picker"><span class="control-label">결과 단위</span><button id="to-trigger" class="unit-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="to-menu"></button><div id="to-menu" class="unit-menu" role="listbox" aria-label="결과 단위 선택" hidden></div></div>
+            </div>
+            <label class="control-label input-label" for="converter-input">입력값</label>
+            <div class="converter-entry"><input id="converter-input" type="text" inputmode="decimal" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="converter-input-hint"><button id="sign-key" class="sign-button" type="button" aria-label="양수와 음수 전환" hidden>±</button></div>
+            <span id="converter-input-hint" class="sr-only">숫자와 소수점을 입력하세요. 온도는 ± 버튼으로 부호를 바꿉니다.</span>
+            <div class="main-result"><span class="control-label">변환 결과</span><div class="main-result-line"><output id="converter-result">—</output><span id="converter-result-unit"></span></div><p id="converter-note" class="converter-note" hidden></p></div>
+            <p id="fuel-density" class="density-line" hidden>연료 밀도 <strong>6.7 lb/US gal</strong> 적용</p>
+          </div>
+          <section class="other-results" aria-labelledby="other-results-title"><h2 id="other-results-title">다른 단위</h2><div id="other-results-list"></div></section>
+        </div>
+      </section>
+      <section id="panel-weight" role="tabpanel" aria-labelledby="tab-weight" hidden>
+        <div id="aircraft-view"><div id="aircraft-list" class="aircraft-list"></div></div>
+        <div id="weight-form-view" hidden>
+          <div class="weight-head"><button id="back-aircraft" class="back-button" type="button">← 기종 선택</button><div class="detail-title"><span id="selected-aircraft-icon" class="detail-icon aircraft-detail-icon" aria-hidden="true"></span><h1 id="selected-aircraft-title">S-92</h1></div></div>
+          <div id="weight-result-card" class="weight-result-card" aria-live="polite"><span id="weight-status">여유중량</span><strong id="weight-remaining">— kg</strong><span id="weight-remaining-lb" hidden></span></div>
+          <form id="weight-form" novalidate>
+            <div class="compact-panel">
+              <div class="compact-row people-row"><h2>인원</h2><div class="row-controls"><label for="person-weight">1인 중량</label><input id="person-weight" class="short-input" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="80"><span>kg ×</span><input id="people-count" class="count-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="0" aria-label="인원 수"><span>명</span></div></div>
+              <div class="compact-row"><h2>연료</h2><div class="row-controls"><label for="fuel-value">연료량</label><input id="fuel-value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0"><select id="fuel-unit" aria-label="연료 단위"><option>kg</option><option>lb</option><option>L</option><option>US gal</option></select></div></div>
+              <div class="compact-row equipment-row"><h2>장비</h2><div class="equipment-controls"><div class="row-controls"><label for="rescue-value">구조</label><input id="rescue-value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0"><select id="rescue-unit" aria-label="구조장비 단위"><option>kg</option><option>lb</option></select></div><div class="row-controls"><label for="medical-value">구급</label><input id="medical-value" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="0"><select id="medical-unit" aria-label="구급장비 단위"><option>kg</option><option>lb</option></select></div></div></div>
+            </div>
+            <p id="weight-error" class="error-text" role="alert" hidden></p>
+            <button class="primary-button" type="submit">결과 확인</button>
+          </form>
+          <section id="weight-breakdown-section" class="breakdown" aria-labelledby="weight-breakdown-title" hidden><h2 id="weight-breakdown-title">계산 내역</h2><dl id="weight-breakdown"></dl></section>
+        </div>
+      </section>
+    </main>
+    <section id="app-info-view" class="app-info-view" aria-labelledby="app-info-title" hidden>
+      <header class="info-header"><button id="back-app-info" class="back-button" type="button">← 뒤로</button><h1 id="app-info-title">앱 정보</h1></header>
+      <dl class="app-info-list">
+        <div><dt>앱 버전</dt><dd>v0.1.0</dd></div>
+        <div><dt>만든 사람</dt><dd>유안 (0xyuanyx)</dd></div>
+        <div><dt>문의·소스코드</dt><dd><a href="https://github.com/0xyuanyx/HeliKit" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">›</span></a></dd></div>
+        <div><dt>라이선스</dt><dd><button id="open-license" class="info-link" type="button">MIT <span aria-hidden="true">›</span></button></dd></div>
+        <div class="info-stack"><dt>개인정보</dt><dd>수집하는 정보가 없습니다</dd></div>
+        <div class="info-stack"><dt>안내</dt><dd>참고용 계산입니다. 실제 운항은 비행교범과 W&amp;B 기준을 따르세요.</dd></div>
+      </dl>
+      <p class="app-info-copyright">© 2026 유안</p>
+    </section>
+    <section id="license-view" class="app-info-view" aria-labelledby="license-title" hidden>
+      <header class="info-header"><button id="back-license" class="back-button" type="button">← 뒤로</button><h1 id="license-title">MIT 라이선스</h1></header>
+      <article class="license-text"><h2>MIT License</h2><p>Copyright © 2026 유안</p><p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p><h2>포함된 오픈소스</h2><p>decimal.js — MIT License, Copyright © 2025 Michael Mclaughlin</p><p>Pretendard v1.3.9 — SIL Open Font License 1.1, Copyright © 2021 Kil Hyung-jin</p></article>
+    </section>
+  </div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Pretendard v1.3.9 (SIL OFL 1.1, vendor/fonts/Pretendard-LICENSE.txt) */
+@font-face{font-family:Pretendard;font-weight:400;font-style:normal;font-display:swap;src:url('vendor/fonts/Pretendard-Regular.woff2') format('woff2')}
+@font-face{font-family:Pretendard;font-weight:500;font-style:normal;font-display:swap;src:url('vendor/fonts/Pretendard-Medium.woff2') format('woff2')}
+@font-face{font-family:Pretendard;font-weight:600;font-style:normal;font-display:swap;src:url('vendor/fonts/Pretendard-SemiBold.woff2') format('woff2')}
+@font-face{font-family:Pretendard;font-weight:700;font-style:normal;font-display:swap;src:url('vendor/fonts/Pretendard-Bold.woff2') format('woff2')}
+@font-face{font-family:Pretendard;font-weight:800;font-style:normal;font-display:swap;src:url('vendor/fonts/Pretendard-ExtraBold.woff2') format('woff2')}
+
+:root{font-family:Pretendard,system-ui,sans-serif;color:var(--text);background:var(--bg);font-synthesis:none}*{box-sizing:border-box}html{min-width:320px}body{margin:0;min-height:100dvh}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.app-shell{max-width:440px;min-height:100dvh;margin:0 auto;background:var(--bg)}.app-header{position:relative;display:flex;align-items:center;justify-content:center;min-height:68px;padding:9px 16px;border-bottom:1px solid var(--border);background:var(--surface)}.brand{display:flex;align-items:center;gap:9px;font-size:23px;font-weight:760;letter-spacing:-.03em}.brand-mark{display:grid;place-items:center;width:31px;height:31px;border-radius:8px;background:var(--accent);color:var(--surface);font-size:20px;font-weight:800}.menu-button{position:absolute;right:14px;top:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:48px;height:48px;padding:0;border:0;border-radius:10px;background:transparent;color:var(--text)}.menu-button span{display:block;width:22px;height:2px;border-radius:2px;background:var(--text)}.menu-button:disabled{opacity:1;cursor:default}.main-tabs{display:grid;grid-template-columns:1fr 1fr;padding:0 16px;border-bottom:1px solid var(--border);background:var(--surface)}.main-tab{min-height:57px;border:0;border-bottom:4px solid transparent;background:transparent;color:var(--textSub);font-size:18px;font-weight:700;white-space:nowrap}.main-tab.active{border-bottom-color:var(--accent);color:var(--accent)}.main-tab:hover{background:var(--accentSoft)}main{padding:0 16px 30px}.section-title{margin:19px 2px 15px;font-size:25px;line-height:1.3;letter-spacing:-.035em;word-break:keep-all}.category-grid,.aircraft-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.category-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;width:100%;aspect-ratio:1/1;border:1px solid var(--border);border-radius:17px;background:var(--surface);color:var(--accent)}.category-tile:hover,.aircraft-button:hover{background:var(--accentSoft)}.category-tile:active,.aircraft-button:active{background:var(--accentSoft);transform:scale(.98)}.tile-icon{display:block;width:58px;height:58px;background:currentColor;-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}.category-tile span:last-child{color:var(--text);font-size:25px;font-weight:750;line-height:1.2}.back-button{min-height:40px;padding:0;border:0;background:transparent;color:var(--accent);font-size:16px;font-weight:700}.converter-head{padding:8px 1px 7px}.converter-head h1,.weight-head h1{margin:1px 0 0;font-size:27px;line-height:1.25;letter-spacing:-.035em}.converter-core{padding:13px 14px 10px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.unit-pair{display:grid;grid-template-columns:minmax(0,1fr) 41px minmax(0,1fr);gap:6px;align-items:end}.unit-picker{position:relative;min-width:0}.control-label{display:block;color:var(--textSub);font-size:15px;font-weight:700;line-height:1.3}.unit-trigger{display:flex;align-items:center;justify-content:space-between;gap:5px;width:100%;min-height:54px;margin-top:6px;padding:0 10px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);text-align:left;font-size:18px;font-weight:750}.trigger-label{display:flex;align-items:center;gap:5px;min-width:0;white-space:nowrap}.unit-symbol{white-space:nowrap}.chevron{flex:none;color:var(--textSub);font-size:25px;font-weight:400}.swap-button{width:41px;height:54px;border:1px solid var(--border);border-radius:10px;background:var(--accentSoft);color:var(--accent);font-size:24px}.unit-menu{position:absolute;z-index:20;top:calc(100% + 5px);left:0;width:max-content;min-width:245px;max-width:min(350px,calc(100vw - 35px));max-height:315px;overflow-y:auto;padding:5px;border:1px solid var(--border);border-radius:12px;background:var(--surface);box-shadow:0 10px 24px rgba(30,35,41,.14)}.unit-picker:last-child .unit-menu{left:auto;right:0}.unit-option{display:flex;align-items:center;gap:5px;width:100%;min-height:49px;padding:9px;border:0;border-radius:8px;background:transparent;color:var(--text);text-align:left;font-size:16px;font-weight:650;white-space:nowrap}.unit-option:hover,.unit-option[aria-selected=true]{background:var(--accentSoft)}.unit-korean{color:var(--textSub);font-size:14px;font-weight:500}.fuel-badge{display:inline-flex;align-items:center;justify-content:center;flex:none;min-height:22px;padding:2px 5px;border-radius:5px;background:var(--fuelBg);color:var(--fuelText);font-size:12px;font-weight:800;line-height:1}.input-label{margin-top:17px}.converter-entry{display:flex;gap:7px;margin-top:6px}.converter-entry input{width:100%;height:58px;min-width:0;padding:0 13px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);font-size:31px;font-weight:700;font-variant-numeric:tabular-nums}.sign-button{width:58px;flex:none;border:1px solid var(--border);border-radius:10px;background:var(--accentSoft);color:var(--accent);font-size:27px;font-weight:750}.main-result{margin-top:16px;padding-top:13px;border-top:1px solid var(--divider)}.main-result-line{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px;margin-top:4px;color:var(--accent)}.main-result output{font-size:clamp(32px,9.1vw,41px);font-weight:800;letter-spacing:-.05em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.main-result-line>span{display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:16px;font-weight:700;line-height:1.5}.main-result-line .unit-korean{color:var(--accent);font-size:15px;font-weight:600}.converter-note{margin:4px 0 0;color:#a82d2d;font-size:14px;font-weight:600}.density-line{margin:10px 0 0;padding-top:9px;border-top:1px solid var(--divider);color:var(--textSub);font-size:15px;font-weight:600}.density-line strong{color:var(--text);font-variant-numeric:tabular-nums}.other-results{margin-top:19px;padding:0 1px;border-top:1px solid var(--border)}.other-results h2{margin:14px 0 3px;font-size:18px;line-height:1.35}.other-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:59px;padding:9px 1px;border-bottom:1px solid var(--divider)}.other-unit{display:flex;align-items:center;gap:5px;flex-wrap:wrap;min-width:0;color:var(--text);font-size:17px;font-weight:700}.other-unit .unit-korean{font-size:14px}.other-row output{max-width:48%;text-align:right;color:var(--accent);font-size:21px;font-weight:750;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.aircraft-button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:132px;padding:12px;border:1px solid var(--border);border-radius:16px;background:var(--surface);color:var(--text);font-size:21px;font-weight:750}.aircraft-button img{width:80px;height:70px;object-fit:contain;margin-bottom:5px}.weight-head{padding:8px 1px 12px}.weight-result-card{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:115px;gap:2px;margin-bottom:13px;padding:12px;border:1px solid var(--border);border-radius:16px;background:var(--surface);color:var(--accent)}.weight-result-card.under{border:2px solid #176440;background:#eef6f0;color:#176440}.weight-result-card.over{border:2px solid #a82d2d;background:var(--surface);color:#a82d2d}.weight-result-card span:first-child{font-size:17px;font-weight:750}.weight-result-card strong{font-size:clamp(34px,9vw,43px);font-weight:800;letter-spacing:-.05em;font-variant-numeric:tabular-nums}.weight-result-card span:last-child{font-size:15px;font-weight:650}.compact-panel{overflow:hidden;border:1px solid var(--border);border-radius:16px;background:var(--surface)}.compact-row{display:grid;grid-template-columns:46px minmax(0,1fr);gap:8px;align-items:center;min-height:74px;padding:12px 12px;border-bottom:1px solid var(--divider)}.compact-row:last-child{border-bottom:0}.compact-row h2{margin:0;color:var(--accent);font-size:18px;font-weight:800}.row-controls{display:flex;align-items:center;gap:6px;min-width:0}.row-controls label{flex:none;font-size:15px;font-weight:650;white-space:nowrap}.row-controls input{flex:1;min-width:0;height:47px;padding:0 8px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:21px;font-weight:650;font-variant-numeric:tabular-nums}.row-controls input.short-input{flex:0 1 70px;width:70px}.row-controls input.count-input{flex:0 1 55px;width:55px}.row-controls span{flex:none;font-size:15px;font-weight:650;white-space:nowrap}.row-controls select{flex:0 0 auto;max-width:99px;height:47px;padding:0 6px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:16px;font-weight:650}.equipment-controls{display:flex;flex-direction:column;gap:9px}.equipment-controls .row-controls label{min-width:31px}.equipment-controls .row-controls input{max-width:145px}.error-text{margin:12px 1px 0;color:#a82d2d;font-size:16px;font-weight:650}.primary-button{display:block;width:100%;min-height:60px;margin-top:13px;border:0;border-radius:12px;background:var(--accent);color:var(--surface);font-size:20px;font-weight:750}.primary-button:hover{background:#183d70}.primary-button:active{background:#123358}.breakdown{margin-top:22px;border-top:1px solid var(--border)}.breakdown h2{margin:15px 0;font-size:20px}.breakdown dl{margin:0}.breakdown dl>div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--divider);font-size:16px}.breakdown dl>div.total{border-top:2px solid var(--border);font-weight:750}.breakdown dt{color:var(--textSub)}.breakdown dd{margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:700}@media(max-width:370px){.main-tab{font-size:16px}.unit-option{font-size:15px}.unit-korean{font-size:13px}.compact-row{grid-template-columns:39px minmax(0,1fr);gap:5px;padding-left:9px;padding-right:9px}.compact-row h2{font-size:17px}.row-controls{gap:4px}.row-controls label,.row-controls span{font-size:13px}.row-controls input.short-input{flex-basis:61px;width:61px}.row-controls input.count-input{flex-basis:47px;width:47px}.row-controls select{max-width:82px;font-size:14px}}@media(prefers-reduced-motion:no-preference){.category-tile,.aircraft-button{transition:background-color .15s ease,transform .15s ease}.main-tab,.primary-button{transition:background-color .15s ease}}
+:root{scroll-padding-top:8px}.app-header{min-height:62px}.menu-button{top:7px}.converter-head{padding-top:4px;padding-bottom:3px}.converter-core{padding-top:10px}.input-label{margin-top:11px}.main-result{margin-top:11px;padding-top:10px}.density-line{margin-top:7px;padding-top:7px}
+.brand-icon{display:block;width:32px;height:32px;flex:none;background:var(--text);-webkit-mask:url('app-icon.svg') center/contain no-repeat;mask:url('app-icon.svg') center/contain no-repeat}
+
+/* Shared palette: follows the phone's light or dark setting. */
+:root {
+  color-scheme: light;
+  --bg: #DEDAD2;
+  --surface: #F8F7F3;
+  --border: #C8C4BB;
+  --divider: #D2CEC6;
+  --stripe: #EFEDE8;
+  --text: #1E2329;
+  --textSub: #3F444B;
+  --accent: #1F4E8C;
+  --accentSoft: #DDE6F1;
+  --fuelBg: #FCE7CF;
+  --fuelText: #6B3600;
+  --positive: #176440;
+  --positiveSoft: #EDF6EF;
+  --negative: #A82D2D;
+  --negativeSoft: #FFF0EE;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1D1C1A;
+  --surface: #2B2926;
+  --border: #4A4F57;
+  --divider: #3A3733;
+  --stripe: #312F2B;
+  --text: #E6E4DF;
+  --textSub: #BDB8AF;
+  --accent: #9DC0EC;
+  --accentSoft: #2F3A48;
+  --fuelBg: #4A3218;
+  --fuelText: #FFD9A8;
+  --positive: #9FE0B6;
+  --positiveSoft: #25372E;
+  --negative: #FFB7AB;
+  --negativeSoft: #402B2B;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1D1C1A;
+    --surface: #2B2926;
+    --border: #4A4F57;
+    --divider: #3A3733;
+    --stripe: #312F2B;
+    --text: #E6E4DF;
+    --textSub: #BDB8AF;
+    --accent: #9DC0EC;
+    --accentSoft: #2F3A48;
+    --fuelBg: #4A3218;
+    --fuelText: #FFD9A8;
+    --positive: #9FE0B6;
+    --positiveSoft: #25372E;
+    --negative: #FFB7AB;
+    --negativeSoft: #402B2B;
+  }
+}
+:root { font-weight: 500; }
+button, input, select { font-weight: 500; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.category-tile, .aircraft-button, .compact-panel, .converter-core, .weight-result-card { border: 1.5px solid var(--border); }
+.category-tile:active, .aircraft-button:active { border-color: var(--accent); background: var(--accentSoft); }
+.category-tile { color: var(--accent); }
+.tile-icon { width: 66px; height: 66px; }
+.category-tile span:last-child { color: var(--text); font-weight: 700; }
+.aircraft-icon, .detail-icon {
+  display: block;
+  flex: none;
+  background: var(--accent);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+.aircraft-icon { width: 91px; height: 70px; margin-bottom: 5px; }
+.detail-title { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; text-align: center; }
+.detail-title h1, .converter-head h1, .weight-head h1 { margin: 0; color: var(--text); font-size: 32px; line-height: 1.15; font-weight: 700; letter-spacing: -.035em; }
+.category-detail-icon { width: 46px; height: 46px; }
+.aircraft-detail-icon { width: 72px; height: 46px; }
+.converter-head, .weight-head { padding: 4px 1px 16px; }
+.back-button { color: var(--text); }
+.unit-trigger, .unit-menu, .unit-option, .converter-entry input, .row-controls input, .row-controls select { background: var(--surface); color: var(--text); }
+.unit-option:hover, .unit-option[aria-selected=true], .swap-button, .sign-button { background: var(--accentSoft); }
+.unit-menu { scrollbar-color: var(--border) var(--surface); }
+.unit-divider { position: relative; display: flex; align-items: center; gap: 9px; min-height: 30px; padding: 0 9px; color: var(--textSub); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.unit-divider::after { content: ''; width: 100%; height: 1px; background: var(--divider); }
+.unit-menu .unit-divider { margin: 3px 0; }
+.unit-korean { color: var(--textSub); }
+.fuel-badge { background: var(--fuelBg); color: var(--fuelText); }
+.main-result-line { align-items: center; gap: 8px; width: 100%; }
+.main-result output { min-width: 0; font-weight: 700; }
+#converter-result-unit { display: inline-flex; align-items: center; justify-content: flex-end; gap: 4px; flex-wrap: wrap; margin-left: auto; text-align: right; color: var(--accent); font-size: 16px; font-weight: 700; }
+.main-result-line .unit-korean { color: var(--accent); }
+.main-result-line .fuel-badge { margin-left: 3px; }
+.other-row { flex-wrap: wrap; padding: 9px 10px; }
+.other-row:nth-of-type(even) { background: var(--stripe); }
+.other-row output { flex: none; max-width: 100%; margin-left: auto; font-weight: 700; overflow-wrap: normal; }
+.other-row.stacked output { width: 100%; text-align: right; }
+.other-results > .unit-divider, #other-results-list > .unit-divider { padding-left: 10px; padding-right: 10px; }
+.weight-result-card { border-width: 2px; background: var(--surface); color: var(--accent); }
+#weight-remaining-lb { min-height: 1.2em; line-height: 1.2; }
+#weight-remaining-lb[hidden] { display: block !important; visibility: hidden; }
+.weight-result-card.under { border: 2px solid var(--positive); background: var(--positiveSoft); color: var(--positive); }
+.weight-result-card.over { border: 2px solid var(--negative); background: var(--negativeSoft); color: var(--negative); }
+.error-text, .converter-note { color: var(--negative); }
+.primary-button { background: var(--accent); color: var(--surface); }
+.primary-button:hover, .primary-button:active { background: var(--accent); filter: brightness(.9); }
+:root[data-theme="dark"] .primary-button { color: var(--bg); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .primary-button { color: var(--bg); }
+}
+
+/* Keep the input, primary result and density above a phone's numeric keyboard. */
+.converter-head { padding-top: 0; padding-bottom: 4px; }
+.converter-head .back-button { min-height: 32px; }
+.unit-picker .control-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.unit-trigger { margin-top: 0; }
+.converter-core { padding-top: 9px; padding-bottom: 8px; }
+.input-label { margin-top: 8px; }
+.converter-entry { margin-top: 4px; }
+.converter-entry input { height: 54px; }
+.main-result { margin-top: 8px; padding-top: 7px; }
+.density-line { margin-top: 5px; padding-top: 5px; }
+@media (max-width: 380px) {
+  .converter-core { padding-left: 6px; padding-right: 6px; }
+}
+
+/* Header settings menu */
+.app-header { z-index: 30; }
+.menu-button { border: 1.5px solid transparent; }
+.menu-button:hover, .menu-button[aria-expanded="true"] { background: var(--accentSoft); border-color: var(--accent); }
+.settings-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 12px;
+  width: min(246px, calc(100vw - 24px));
+  padding: 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 12px 25px rgb(0 0 0 / .18);
+}
+.settings-title { display: block; margin-bottom: 14px; font-size: 19px; font-weight: 700; }
+.theme-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; font-size: 16px; font-weight: 700; cursor: pointer; }
+.theme-choices { display: flex; align-items: center; gap: 7px; color: var(--textSub); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.theme-switch { appearance: none; position: relative; flex: none; width: 50px; height: 30px; margin: 0; border: 1.5px solid var(--textSub); border-radius: 20px; background: var(--border); cursor: pointer; }
+.theme-switch::before { content: ''; position: absolute; top: 3px; left: 3px; width: 21px; height: 21px; border-radius: 50%; background: var(--surface); transition: transform .15s ease; }
+.theme-switch:checked { border-color: var(--accent); background: var(--accent); }
+.theme-switch:checked::before { transform: translateX(19px); }
+@media (prefers-reduced-motion: reduce) { .theme-switch::before { transition: none; } }
+
+/* Tile spacing adjusted after the first phone review. */
+.category-tile { width: calc(100% - 20px); min-height: 126px; aspect-ratio: 1.12 / 1; justify-self: center; }
+.category-grid { row-gap: 15px; }
+.aircraft-list { row-gap: 15px; }
+.aircraft-button { min-height: 138px; padding: 14px 8px; }
+.aircraft-button { width: calc(100% - 10px); justify-self: center; }
+
+/* Grid landing screens */
+#category-view, #aircraft-view { padding-top: 18px; }
+.category-grid, .aircraft-list { column-gap: 11px; }
+.category-tile, .aircraft-button {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  background: var(--surface);
+  color: var(--text);
+}
+.category-tile { gap: 5px; min-height: 134px; aspect-ratio: 1.14 / 1; }
+.category-tile:hover, .aircraft-button:hover,
+.category-tile:active, .aircraft-button:active {
+  border-color: transparent;
+  background: var(--accentSoft);
+}
+.tile-icon { width: 40px; height: 40px; background: var(--accent); }
+.tile-name, .aircraft-name { color: var(--text); font-size: 22px; font-weight: 600; line-height: 1.2; }
+.tile-hint { color: var(--textSub); font-size: 15px; font-weight: 500; line-height: 1.25; white-space: nowrap; }
+.category-tile .tile-name { color: var(--text); font-size: 22px; font-weight: 600; }
+.category-tile .tile-hint { color: var(--textSub); font-size: 15px; font-weight: 500; }
+.aircraft-button { min-height: 138px; gap: 7px; }
+.aircraft-icon { width: 82px; height: 48px; margin: 0; }
+.aircraft-name { font-size: 22px; }
+.brand { font-weight: 700; }
+.main-tab { font-weight: 500; }
+.main-tab.active { font-weight: 600; }
+
+/* Settings information */
+.settings-info { margin-top: 12px; padding-top: 13px; border-top: 1px solid var(--divider); }
+.settings-info > strong { display: block; margin-bottom: 8px; font-size: 16px; font-weight: 600; }
+.settings-info dl { margin: 0; }
+.settings-info dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 5px 0; font-size: 14px; }
+.settings-info dt { flex: none; color: var(--textSub); font-weight: 500; white-space: nowrap; }
+.settings-info dd { margin: 0; color: var(--text); text-align: right; font-weight: 600; }
+.settings-info .settings-guidance { align-items: flex-start; }
+.settings-guidance dd { max-width: 192px; font-size: 13px; font-weight: 500; line-height: 1.45; }
+
+/* Compact menu typography */
+.settings-panel { padding: 13px 14px; }
+.settings-title { margin-bottom: 9px; font-size: 15px; font-weight: 600; }
+.theme-row { min-height: 40px; font-size: 13px; font-weight: 600; }
+.theme-choices { gap: 6px; font-size: 12px; }
+.theme-switch { width: 44px; height: 26px; }
+.theme-switch::before { width: 18px; height: 18px; }
+.theme-switch:checked::before { transform: translateX(16px); }
+.settings-info { margin-top: 9px; padding-top: 9px; }
+.settings-info > strong { margin-bottom: 4px; font-size: 13px; }
+.settings-info dl > div { gap: 12px; padding: 3px 0; font-size: 12px; }
+.settings-info .settings-guidance { display: block; }
+.settings-guidance dt { display: block; margin-bottom: 2px; }
+.settings-guidance dd { display: block; max-width: none; font-size: 11px; line-height: 1.4; text-align: left; }
+
+
+/* Header logo, menu and full-screen application information */
+.app-shell { position: relative; }
+.settings-panel { padding: 12px 14px; }
+.settings-title { margin-bottom: 4px; font-size: 16px; font-weight: 600; }
+.theme-row, .settings-link { min-height: 56px; }
+.theme-row > span:first-child, .settings-link { font-size: 20px; font-weight: 600; }
+.theme-choices { font-size: 13px; }
+.settings-link { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0; border: 0; border-top: 1px solid var(--divider); background: transparent; color: var(--text); font-family: inherit; cursor: pointer; text-align: left; }
+.settings-link span { color: var(--textSub); font-size: 26px; line-height: 1; }
+.app-info-view { position: absolute; inset: 0; z-index: 40; min-height: 100dvh; overflow-y: auto; background: var(--bg); color: var(--text); }
+.info-header { position: relative; display: flex; align-items: center; min-height: 62px; padding: 0 16px; border-bottom: 1px solid var(--divider); background: var(--bg); }
+.info-header .back-button { min-height: 56px; padding: 0; border: 0; background: transparent; font-family: inherit; font-size: 17px; font-weight: 600; }
+.info-header h1 { position: absolute; left: 50%; margin: 0; transform: translateX(-50%); color: var(--text); font-size: 22px; font-weight: 700; white-space: nowrap; }
+.app-info-list { margin: 0; padding: 12px 16px 0; }
+.app-info-list > div { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; border-bottom: 1px solid var(--divider); }
+.app-info-list dt, .app-info-list dd { margin: 0; color: var(--text); font-size: 20px; font-weight: 500; line-height: 1.4; }
+.app-info-list dt { flex: 0 1 auto; }
+.app-info-list dd { flex: 0 1 auto; text-align: right; }
+.app-info-list a, .info-link { display: inline-flex; align-items: center; gap: 8px; border: 0; background: transparent; color: var(--accent); font: inherit; font-weight: 600; text-decoration: none; }
+.app-info-list a span, .info-link span { color: var(--textSub); font-size: 26px; line-height: 1; }
+.app-info-list .info-stack { display: block; padding: 14px 0; }
+.info-stack dt { margin-bottom: 7px; }
+.info-stack dd { text-align: left; }
+.app-info-copyright { margin: 22px 16px 32px; color: var(--textSub); font-size: 17px; font-weight: 500; }
+.license-text { padding: 24px 16px 40px; }
+.license-text h2 { margin: 0 0 18px; font-size: 22px; font-weight: 700; }
+.license-text p { margin: 0 0 16px; font-size: 17px; line-height: 1.55; }
+
+
+/* Larger visual anchors and phone-first numeric input. */
+.category-tile .tile-icon { width: 60px; height: 60px; }
+.back-button { min-height: 44px; font-size: 20px; font-weight: 700; }
+.info-header .back-button { font-size: 20px; font-weight: 700; }
+.converter-head { padding-bottom: 19px; }
+.weight-head { padding-bottom: 31px; }
+input[type="text"][inputmode="decimal"], input[type="text"][inputmode="numeric"] { appearance: textfield; -moz-appearance: textfield; }
+
+/* Sticky top bar (header + tabs) */
+.top-bar { position: sticky; top: 0; z-index: 30; }
+:root { scroll-padding-top: 128px; }
+
+/* Unit trigger: 한글 단위명이 길면 다음 줄로 */
+.unit-trigger { padding-top: 6px; padding-bottom: 6px; }
+.unit-trigger .trigger-label { flex-wrap: wrap; row-gap: 0; white-space: normal; line-height: 1.25; }
+.unit-trigger .unit-korean { font-size: 13px; word-break: keep-all; overflow-wrap: anywhere; }
+.unit-pair { align-items: stretch; }
+.unit-pair .unit-trigger { height: 100%; }
+.unit-pair .swap-button { height: auto; min-height: 54px; }
+.license-text p + h2 { margin-top: 28px; }

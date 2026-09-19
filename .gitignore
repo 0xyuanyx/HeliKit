@@ -1,0 +1,6 @@
+.DS_Store
+.claude/
+
+# 개인 기획·디자인 메모 (로컬 전용)
+*-plan.md
+.calm-design/
