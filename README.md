@@ -36,9 +36,9 @@ node --test *.test.mjs
 
 ```sh
 cd ~ && keytool -genkeypair -v -keystore helikit.jks -alias helikit -keyalg RSA -keysize 2048 -validity 10000
-base64 -i helikit.jks | gh secret set ANDROID_KEYSTORE_BASE64
-gh secret set ANDROID_KEYSTORE_PASSWORD
-gh secret set ANDROID_KEY_ALIAS --body helikit
+base64 -i helikit.jks | gh secret set ANDROID_KEYSTORE_BASE -R 0xyuanyx/HeliKit64
+gh secret set ANDROID_KEYSTORE_PASSWORD -R 0xyuanyx/HeliKit
+gh secret set ANDROID_KEY_ALIAS -R 0xyuanyx/HeliKit --body helikit
 ```
 
 `helikit.jks`와 비밀번호는 저장소 밖에 따로 보관합니다. 같은 키로 서명해야 기존 앱 위에 업데이트 설치가 됩니다.
