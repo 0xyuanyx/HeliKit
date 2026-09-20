@@ -276,3 +276,6 @@ input[type="text"][inputmode="decimal"], input[type="text"][inputmode="numeric"]
 .app-info-view { padding-top: var(--safe-top); padding-bottom: var(--safe-bottom); }
 main { padding-bottom: calc(30px + var(--safe-bottom)); }
 :root { scroll-padding-top: calc(128px + var(--safe-top)); }
+
+/* 입력 전 0은 안내용 회색 글자 */
+.row-controls input::placeholder { color: var(--textSub); opacity: .6; }
