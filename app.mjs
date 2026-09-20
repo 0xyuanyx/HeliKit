@@ -10,14 +10,19 @@ try { savedTheme = localStorage.getItem('helikit:theme'); } catch { /* Storage c
 let activeTheme = resolveTheme(savedTheme, themeMedia.matches);
 let themeOverridden = savedTheme === 'light' || savedTheme === 'dark';
 // In the Android app, match status bar icon colors to the in-app theme.
-const systemBars = window.Capacitor?.isNativePlatform?.() ? window.Capacitor.registerPlugin('SystemBars') : null;
+// Anything here must stay optional: the app has to run in a plain browser too.
+function setNativeBarStyle(theme) {
+  try {
+    window.Capacitor?.nativePromise?.('SystemBars', 'setStyle', { style: theme === 'dark' ? 'DARK' : 'LIGHT' })?.catch?.(() => {});
+  } catch { /* Not running inside the native app. */ }
+}
 
 function applyTheme(theme) {
   activeTheme = theme;
   document.documentElement.dataset.theme = theme;
   $('theme-toggle').checked = theme === 'dark';
   $('theme-color').content = theme === 'dark' ? '#1C1F24' : '#E4E1DA';
-  systemBars?.setStyle({ style: theme === 'dark' ? 'DARK' : 'LIGHT' }).catch(() => {});
+  setNativeBarStyle(theme);
 }
 
 function overlayBaseState() {

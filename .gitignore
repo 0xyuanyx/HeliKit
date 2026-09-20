@@ -9,3 +9,5 @@ node_modules/
 www/
 *.jks
 *.keystore
+
+*.apk
